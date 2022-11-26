@@ -1,13 +1,13 @@
-import { ITags } from '../@types';
+import { ITags } from '@/@types';
 
 export enum TAG {
-  OVERVIEW,
-  HISTORICAL,
-  ON_BUS,
-  STAR,
-  DATE,
-  DURATION,
-  CAPACITY,
+  OVERVIEW = 'OVERVIEW',
+  HISTORICAL = 'HISTORICAL',
+  ON_BUS = 'ON_BUS',
+  STAR = 'STAR',
+  DATE = 'DATE',
+  DURATION = 'DURATION',
+  CAPACITY = 'CAPACITY',
 }
 
 export enum ICONS {
