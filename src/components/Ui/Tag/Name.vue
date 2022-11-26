@@ -30,7 +30,7 @@ export default Vue.extend({
         [TAG.HISTORICAL]: 'Историческая',
         [TAG.OVERVIEW]: 'Обзорная',
       };
-      return tags[this.name];
+      return tags[this.name] || '';
     },
   },
 });
