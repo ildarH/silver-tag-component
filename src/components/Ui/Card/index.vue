@@ -1,24 +1,51 @@
 <template>
-  <div class="card">
-    <slot name="card-title" />
-    <slot name="card-content" />
-    <slot name="card-footer" />
-  </div>
+  <v-card
+    :loading="isLoading"
+    :disabled="disabled"
+    :elevation="elevation"
+    :outlined="outlined"
+    :tile="tile"
+  >
+    <v-card-title>
+      <slot name="card-title" />
+    </v-card-title>
+    <v-card-text>
+      <slot name="card-content" />
+    </v-card-text>
+    <v-card-actions>
+      <slot name="card-actions" />
+    </v-card-actions>
+  </v-card>
 </template>
 
 <script lang="ts">
-import Vue from 'vue';
+import Vue, { PropType } from 'vue';
+import { BaseCardOptionsProp } from '@/@types/props';
 
 export default Vue.extend({
   name: 'base-card',
+  props: {
+    isLoading: {
+      type: Boolean,
+      default: false,
+    },
+    cardOptions: {
+      type: Object as PropType<BaseCardOptionsProp>,
+    },
+  },
+  computed: {
+    elevation(): string {
+      return `${this.cardOptions?.elevation || 2}`;
+    },
+    disabled(): boolean {
+      return this.cardOptions?.disabled || false;
+    },
+    outlined(): boolean {
+      return this.cardOptions?.outlined || false;
+    },
+    tile(): boolean {
+      return this.cardOptions?.tile || false;
+    },
+  },
 });
 </script>
-
-<style scoped lang="scss">
-  .card {
-    position: relative;
-    background-color: #eae9e9;
-    border-radius: 8px;
-    box-shadow: 0 1px 2px #9a9a9a
-  }
-</style>
