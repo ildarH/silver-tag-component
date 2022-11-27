@@ -8,9 +8,7 @@
     </v-app-bar>
 
     <v-main>
-      <v-container>
-        <index-page />
-      </v-container>
+      <index-page />
     </v-main>
   </v-app>
 </template>
@@ -21,13 +19,12 @@ import IndexPage from '@/pages/index.vue';
 
 export default Vue.extend({
   name: 'App',
-
   components: {
     IndexPage,
   },
-
-  data: () => ({
-    //
-  }),
 });
 </script>
+
+<style>
+  @import './assets/scss/_reset.css';
+</style>
