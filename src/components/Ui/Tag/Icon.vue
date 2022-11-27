@@ -4,7 +4,7 @@
 
 <script lang="ts">
 import Vue, { PropType } from 'vue';
-import { ICONS } from '@/utils';
+import { ICONS } from '@/@types';
 
 // @vue/component
 export default Vue.extend({
