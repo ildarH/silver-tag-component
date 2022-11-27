@@ -1,6 +1,6 @@
 import { shallowMount } from '@vue/test-utils';
 import Name from '@/components/Ui/Tag/Name.vue';
-import { TAG } from '@/utils';
+import { TAG } from '@/@types';
 
 const overview = TAG.OVERVIEW;
 const onBus = TAG.ON_BUS;
