@@ -5,3 +5,5 @@ export interface BaseCardOptionsProp {
   tile: boolean
   elevation: number
 }
+
+export type TTagsAlign = 'left' | 'justify'
